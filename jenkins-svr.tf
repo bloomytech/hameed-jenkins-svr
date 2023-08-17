@@ -19,7 +19,7 @@ resource "aws_instance" "jenkins-server" {
   vpc_security_group_ids      = [aws_default_security_group.default-sg.id]
   availability_zone           = var.availability_zone
   associate_public_ip_address = true
-  user_data                   = file("install-jenkins.sh")
+  user_data                   = file("jenkins.sh")
   tags = {
     Name = "hameed-jenkins-server"
   }
